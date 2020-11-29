@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="../src/index.css" />
+  </head>
+  <body>
+    <h1>Simple gestures👇</h1>
+    <div class="buttons">
+      <button class="left" onclick="send('left')">left</button>
+      <button class="up" onclick="send('up')">up</button>
+      <button class="right" onclick="send('right')">right</button>
+    </div>
+    <script>
+      const send = (key) => fetch("/" + key);
+    </script>
+  </body>
+</html>
