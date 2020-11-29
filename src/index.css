@@ -8,6 +8,9 @@ body {
 .buttons {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  height: 90vh;
+
 }
 
 button {
@@ -31,7 +34,7 @@ button {
 }
 
 .right {
-  background-color: #FF6B6B;
+  background-color: #EF233C;
 }
 
 .up {
