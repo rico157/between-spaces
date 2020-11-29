@@ -4,12 +4,24 @@
     <meta charset="UTF-8" />
     <title>Hello World!</title>
     <link rel="stylesheet" type="text/css" href="/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div class="buttons">
-      <button class="left" onclick="send('left')">left</button>
-      <button class="up" onclick="send('up')">up</button>
-      <button class="right" onclick="send('right')">right</button>
+      <button class="left" onclick="send('left')">
+        <i class="fas fa-caret-left"></i>
+      </button>
+      <button class="up" onclick="send('up')">
+        <i class="fas fa-th-large"></i>
+      </button>
+      <button class="right" onclick="send('right')">
+        <i class="fas fa-caret-right"></i>
+      </button>
     </div>
     <script>
       const send = (key) => fetch("/" + key);
