@@ -1,7 +1,7 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: auto;
-
+  background-color: #292F36;
 }
 
 .buttons {
@@ -12,6 +12,29 @@ body {
 button {
   width: 100%;
   height: 80vh;
-  border-radius: 0;
+  border-radius: 2em;
   -webkit-appearance: none;
+  border: none;
+  margin: 1em;
+  -webkit-box-shadow: 10px 10px 20px 8px rgba(0, 0, 0, 0.77), -10px -10px 20px 8px rgba(135, 135, 135, 0.42);
+  -moz-box-shadow: 10px 10px 20px 8px rgba(0, 0, 0, 0.77), -10px -10px 20px 8px rgba(135, 135, 135, 0.42);
+  box-shadow: 10px 10px 20px 8px rgba(0, 0, 0, 0.77), -10px -10px 20px 8px rgba(135, 135, 135, 0.42);
+
+  -webkit-box-shadow: inset 5px 5px 17px 8px rgba(135, 135, 135, 0.77), inset -5px -5px 17px 8px rgba(0, 0, 0, 0.77);
+  -moz-box-shadow: inset 5px 5px 17px 8px rgba(135, 135, 135, 0.77), inset -5px -5px 17px 8px rgba(0, 0, 0, 0.77);
+  box-shadow: inset 5px 5px 17px 8px rgba(135, 135, 135, 0.77), inset -5px -5px 17px 8px rgba(0, 0, 0, 0.77);
+
+}
+
+.left {
+  background-color: #4ECDC4;
+
+}
+
+.right {
+  background-color: #FF6B6B;
+}
+
+.up {
+  background-color: #F7FFF7;
 }
