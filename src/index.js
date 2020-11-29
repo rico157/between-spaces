@@ -32,20 +32,22 @@ app.on("ready", () => {
   server.listen(PORT, () => console.log("listening on port " + PORT));
 
   // Tray logic
-  tray = new Tray(__dirname + "/icon.png");
+  tray = new Tray(__dirname + "/icons/tray-icon.png");
 
   const contextMenu = Menu.buildFromTemplate([
     {
       label: "Get QR code",
       click: () => createWindow()
+    },
+    {
+      label: "Quit",
+      click: () => app.quit()
     }
   ]);
 
   tray.setToolTip("This is my application.");
   tray.setContextMenu(contextMenu);
 });
-
-app.dock.hide();
 
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
@@ -63,3 +65,5 @@ app.on("activate", () => {
     console.log("HELLO");
   }
 });
+
+app.dock.hide();
