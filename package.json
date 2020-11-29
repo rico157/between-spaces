@@ -10,7 +10,6 @@
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
-    "dev" : "nodemon ./src/devListen.js"
   },
   "keywords": [],
   "author": "rico",
@@ -44,7 +43,8 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "qrcode-generator": "^1.4.4"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",
