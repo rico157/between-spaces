@@ -3,17 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <title>Hello World!</title>
-    <link rel="stylesheet" type="text/css" href="/index.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="/index.css" /> -->
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+
+        background-color: #292f36;
+        color: #fff;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+      }
+
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
   </head>
   <body>
+    <h1>💖 Welcome</h1>
+    <h2>Scan the QR Code 👇</h2>
+    <div id="root"></div>
+    <p>
+      or visit
+      <a id="link"></a>
+      from your phone
+    </p>
+
     <script>
-      const send = (key) => fetch("/" + key);
+      const qrcode = require("./qrcode");
+      var typeNumber = 4;
+      var errorCorrectionLevel = "L";
+      var qr = qrcode(typeNumber, errorCorrectionLevel);
+      require("dns").lookup(require("os").hostname(), function (err, add, fam) {
+        qr.addData("http://" + add + ":8080");
+        qr.make();
+        document.getElementById("root").innerHTML = qr.createImgTag();
+        document.getElementById("link").innerHTML = add + ":8080";
+      });
     </script>
   </body>
 </html>
