@@ -4,11 +4,6 @@ const server = require("./server");
 
 const PORT = 8080;
 
-// Get local IP address
-require("dns").lookup(require("os").hostname(), function (err, add, fam) {
-  console.log(add);
-});
-
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require("electron-squirrel-startup")) {
   // eslint-disable-line global-require
@@ -28,11 +23,15 @@ const createWindow = () => {
   // mainWindow.webContents.openDevTools();
   app.dock.show();
 };
-app.on("ready", () => {
-  // Set client server
-  server.listen(PORT, () => console.log("listening"));
 
-  let tray = null;
+// Keep the tray icon from disappearing
+let tray = null;
+
+app.on("ready", () => {
+  // Set client server for mobile controls page
+  server.listen(PORT, () => console.log("listening on port " + PORT));
+
+  // Tray logic
   tray = new Tray(__dirname + "/icon.png");
 
   const contextMenu = Menu.buildFromTemplate([
@@ -41,6 +40,7 @@ app.on("ready", () => {
       click: () => createWindow()
     }
   ]);
+
   tray.setToolTip("This is my application.");
   tray.setContextMenu(contextMenu);
 });
@@ -63,6 +63,3 @@ app.on("activate", () => {
     console.log("HELLO");
   }
 });
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and import them here.
