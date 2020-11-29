@@ -1,8 +1,8 @@
 {
-  "name": "my-app",
-  "productName": "my-app",
+  "name": "Desktop Switcher",
+  "productName": "Desktop Switcher",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Switch desktops from your phone",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -16,12 +16,14 @@
   "license": "MIT",
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "icon": "src/icons/icon.icns"
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "my_app"
+            "name": "Desktop Switcher"
           }
         },
         {
