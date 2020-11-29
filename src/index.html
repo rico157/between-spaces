@@ -44,9 +44,9 @@
 
     <script>
       const qrcode = require("./qrcode");
-      var typeNumber = 4;
-      var errorCorrectionLevel = "L";
-      var qr = qrcode(typeNumber, errorCorrectionLevel);
+      const typeNumber = 4;
+      const errorCorrectionLevel = "L";
+      const qr = qrcode(typeNumber, errorCorrectionLevel);
       require("dns").lookup(require("os").hostname(), function (err, add, fam) {
         qr.addData("http://" + add + ":8080");
         qr.make();
