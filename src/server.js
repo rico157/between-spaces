@@ -11,15 +11,15 @@ app.get("/", (req, res) => {
 });
 
 app.get("/up", (req, res) => {
-  send("up").then(() => res.send("<h1>Hello world</h1>"));
+  send("up").then(() => res.sendStatus(200));
 });
 
 app.get("/right", (req, res) => {
-  send("right").then(() => res.send("<h1>Hello world</h1>"));
+  send("right").then(() => res.sendStatus(200));
 });
 
 app.get("/left", (req, res) => {
-  send("left").then(() => res.send("<h1>Hello world</h1>"));
+  send("left").then(() => res.sendStatus(200));
 });
 
 module.exports = app;
