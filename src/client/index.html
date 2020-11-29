@@ -12,6 +12,17 @@
     />
   </head>
   <body>
+    <div class="buttons">
+      <button class="left" onclick="send('left')">
+        <i class="fas fa-caret-left"></i>
+      </button>
+      <button class="up" onclick="send('up')">
+        <i class="fas fa-th-large"></i>
+      </button>
+      <button class="right" onclick="send('right')">
+        <i class="fas fa-caret-right"></i>
+      </button>
+    </div>
     <script>
       const send = (key) => fetch("/" + key);
     </script>
