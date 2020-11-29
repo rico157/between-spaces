@@ -2,22 +2,31 @@ const { app, BrowserWindow, Menu, Tray } = require("electron");
 const path = require("path");
 const server = require("./server");
 
+const PORT = 8080;
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require("electron-squirrel-startup")) {
   // eslint-disable-line global-require
   app.quit();
 }
 
-let tray = null;
+// Get local IP address
+require("dns").lookup(require("os").hostname(), function (err, add, fam) {
+  console.log(add);
+});
 
 app.on("ready", () => {
-  server.listen(8080, () => console.log("listening"));
+  const createWindow = new BrowserWindow({ width: 800, height: 600 });
+  // Set client server
+  server.listen(PORT, () => console.log("listening"));
+
+  let tray = null;
   tray = new Tray("/Users/rico/icon.png");
+
   const contextMenu = Menu.buildFromTemplate([
-    { label: "Item1", type: "radio" },
-    { label: "Item2", type: "radio" },
-    { label: "Item3", type: "radio", checked: true },
-    { label: "Item4", type: "radio" }
+    {
+      label: "Get QR code",
+      click: () => createWindow.loadURL(`index.html`)
+    }
   ]);
   tray.setToolTip("This is my application.");
   tray.setContextMenu(contextMenu);
