@@ -13,18 +13,22 @@
   </head>
   <body>
     <div class="buttons">
+      <!-- Move left | CTRL + LEFT-->
       <button class="left" onclick="send('left')">
         <i class="fas fa-caret-left"></i>
       </button>
+      <!-- Mission Control | CTRL + UP -->
       <button class="up" onclick="send('up')">
         <i class="fas fa-th-large"></i>
       </button>
+      <!-- Move right | CTRL + RIGHT -->
       <button class="right" onclick="send('right')">
         <i class="fas fa-caret-right"></i>
       </button>
     </div>
     <script>
-      const send = (key) => fetch("/" + key);
+      // Send a GET request with the key to add to the endpoint predefined with "CTRL +"
+      const send = (key) => fetch(`/${key}`);
     </script>
   </body>
 </html>
