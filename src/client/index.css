@@ -3,13 +3,14 @@ body {
   margin: auto;
   background-color: #292F36;
   text-align: center;
+  padding-right: 10em;
 }
 
 .buttons {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 button {
