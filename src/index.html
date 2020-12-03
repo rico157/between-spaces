@@ -43,13 +43,16 @@
     </p>
 
     <script>
-      const qrcode = require("./qrcode");
+      const qrcode = require("qrcode-generator");
       const typeNumber = 4;
       const errorCorrectionLevel = "L";
       const qr = qrcode(typeNumber, errorCorrectionLevel);
+      // Get ip address
       require("dns").lookup(require("os").hostname(), function (err, add, fam) {
+        // Make QR code data
         qr.addData("http://" + add + ":8080");
         qr.make();
+        // Inject data to html
         document.getElementById("root").innerHTML = qr.createImgTag();
         document.getElementById("link").innerHTML = add + ":8080";
       });
