@@ -7,7 +7,7 @@
 ***
 ***
 *** To avoid retyping too much info. Do a search and replace for the following:
-*** github_username, repo_name, twitter_handle, email, project_title, project_description
+*** rico157, between-spaces, riccardo_cogoni, cogonir@live.com, Between Spaces, Move between desktop spaces from your phone
 -->
 
 
@@ -21,32 +21,27 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-[![Twitter][twitter-shield]][twitter-url]
-[![Portfolio][Portfolio-shield]][Portfolio-url]
+
 
 
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/rico157/between-spaces">
+    <img src="examples/icon.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">project_title</h3>
+  <h3 align="center">Between Spaces</h3>
 
   <p align="center">
-    project_description
+    Move between desktop spaces from your phone
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/rico157/between-spaces">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/rico157/between-spaces/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/rico157/between-spaces/issues">Request Feature</a>
   </p>
 </p>
 
@@ -70,8 +65,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -83,39 +76,37 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]]
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
 
 
 ### Built With
 
-* []()
-* []()
-* []()
+* [ElectronJS](https://www.electronjs.org/)
+* [ExpressJS](https://expressjs.com/)
+* [Node Key Sender](https://www.npmjs.com/package/node-key-sender)
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
+*Java is required to run this app*
 
-To get a local copy up and running follow these simple steps.
+This app runs a local server on port: 8080 that can accessed through a QR code or visiting your ip address followed by *:8080* from you phone.
+The link will also be displayed inside the app.
+
+Link example: 192.168.x.x:8080
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* NodeJS
+* Java
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/rico157/between-spaces.git
    ```
 2. Install NPM packages
    ```sh
@@ -127,17 +118,11 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
-
+* Run the app
+* Click on system tray icon to show a QR code OR the needed link
+* Scan the QR code OR visit the link showed underneath the QR code from your phone
+* Enjoy!
+  
 
 
 <!-- CONTRIBUTING -->
@@ -162,19 +147,21 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 ## Contact
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Twitter][twitter-shield]][twitter-url]
+[![Portfolio][Portfolio-shield]][Portfolio-url]
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+<!-- 
+Your Name - [@riccardo_cogoni](https://twitter.com/riccardo_cogoni) - cogonir@live.com
+Project Link: [https://github.com/rico157/between-spaces](https://github.com/rico157/between-spaces) -->
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()
-* []()
-* []()
+* [Node Key Sender](https://www.npmjs.com/package/node-key-sender)
+* [QR Code Generator](https://www.npmjs.com/package/qrcode-generator)
 
 
 
@@ -183,11 +170,12 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo/blob/master/LICENSE.txt
+[license-shield]: https://img.shields.io/github/license/rico157/repo.svg?style=for-the-badge
+[license-url]: https://github.com/rico157/repo/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/github_username
+[linkedin-url]: https://linkedin.com/in/riccardo-cogoni
 [twitter-shield]: https://img.shields.io/badge/-twitter-black.svg?style=for-the-badge&logo=twitter&colorB=555
 [twitter-url]: https://twitter.com/
 [Portfolio-shield]: https://img.shields.io/badge/-Portfolio-blue?style=for-the-badge&colorB=555
-[Portfolio-url]: https://Portfolio.com/
+[Portfolio-url]: https://rico157.github.io
+[product-screenshot]: examples/banner.png
