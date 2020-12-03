@@ -76,14 +76,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Between Spaces is an app prototype that allow you to move between desktop spaces with your phone.
+Between Spaces is an app prototype that allows you to move between desktop spaces with your phone.
 
 ![Between Spaces Screen Shot][product-screenshot]
 
-This app runs a local server that can be accessed with a phone with a QR code or a link displayed inside the app.
-Once the link is open, few buttons will appear on screen which are keyboard shortcuts emitted to OS. 
+This app runs on a local server that can be accessed by a phone with a QR code or the link displayed in the app.
+Once the link is open, few buttons will show on screen to send keyboard shortcuts to the OS. 
 
-The link will also be displayed inside the app.
 The default shortcuts to move between spaces are: 
 * Move left - `ctrl + "left"` 
 * Move right - `ctrl + "right"`
@@ -130,16 +129,19 @@ Software
    ```sh
    npm install
    ```
-
+3. Run the app
+   ```sh
+   npm start
+   ```
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 * Run the app
-* If an receive an alert grant the app access to your Mac otherwise choose Apple menu  > System Preferences, click Security & Privacy, click Privacy, click Accessibility, then select VSCode and Java tickboxes - [Apple.com](https://support.apple.com/en-gb/guide/mac-help/mh43185/mac)
-* Click on the system tray icon to show a QR code OR the link with the IP address followed by the PORT
-* Scan the QR code OR visit the link showed underneath the QR code from your phone
+* If you receive an alert, grant the app access to your Mac otherwise choose Apple menu  > System Preferences, click Security & Privacy, click Privacy, click Accessibility, then select VSCode and Java tickboxes - [Apple.com](https://support.apple.com/en-gb/guide/mac-help/mh43185/mac)
+* Click on the system tray icon to show a QR code OR the link with the IP address followed by the PORT *eg. IP --> 192.168.0.0:8080 <-- PORT*
+* Scan the QR code OR visit the link from your phone
 * Enjoy!
 
 
