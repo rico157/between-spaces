@@ -1,8 +1,8 @@
 {
-  "name": "Desktop Switcher",
-  "productName": "Desktop Switcher",
-  "version": "1.0.0",
-  "description": "Switch desktops from your phone",
+  "name": "Between Spaces",
+  "productName": "Between Spaces",
+  "version": "0.1.0",
+  "description": "Move between desktop spaces from your phone",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -23,7 +23,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "Desktop Switcher"
+            "name": "Between Spaces"
           }
         },
         {
