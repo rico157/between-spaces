@@ -29,7 +29,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/rico157/between-spaces">
-    <img src="examples/icon.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/rico157/between-spaces/blob/main/examples/icon.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Between Spaces</h3>
@@ -171,11 +171,11 @@ Project Link: [https://github.com/rico157/between-spaces](https://github.com/ric
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [license-shield]: https://img.shields.io/github/license/rico157/repo.svg?style=for-the-badge
-[license-url]: https://github.com/rico157/repo/blob/master/LICENSE.txt
+[license-url]: https://github.com/rico157/repo/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/riccardo-cogoni
 [twitter-shield]: https://img.shields.io/badge/-twitter-black.svg?style=for-the-badge&logo=twitter&colorB=555
 [twitter-url]: https://twitter.com/
 [Portfolio-shield]: https://img.shields.io/badge/-Portfolio-blue?style=for-the-badge&colorB=555
 [Portfolio-url]: https://rico157.github.io
-[product-screenshot]: examples/banner.png
+[product-screenshot]: https://github.com/rico157/between-spaces/blob/main/examples/banner.png
