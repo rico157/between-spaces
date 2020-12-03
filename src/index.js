@@ -1,5 +1,4 @@
 const { app, BrowserWindow, Menu, Tray } = require("electron");
-const path = require("path");
 const server = require("./server");
 
 const PORT = 8080;
@@ -45,7 +44,7 @@ app.on("ready", () => {
     }
   ]);
 
-  tray.setToolTip("This is my application.");
+  tray.setToolTip("Bewtween Spaces is running");
   tray.setContextMenu(contextMenu);
 });
 
@@ -53,6 +52,7 @@ app.on("ready", () => {
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on("window-all-closed", () => {
+  app.dock.hide();
   if (process.platform !== "darwin") {
     app.quit();
   }
@@ -62,7 +62,6 @@ app.on("activate", () => {
   // On OS X it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.
   if (BrowserWindow.getAllWindows().length === 0) {
-    console.log("HELLO");
   }
 });
 
