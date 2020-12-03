@@ -37,8 +37,8 @@
   <p align="center">
     Move between desktop spaces from your phone
     <br />
-    <a href="https://github.com/rico157/between-spaces">View Demo</a>
-    ·
+    <!-- <a href="https://github.com/rico157/between-spaces">View Demo</a> -->
+    <!-- · -->
     <a href="https://github.com/rico157/between-spaces/issues">Report Bug</a>
     ·
     <a href="https://github.com/rico157/between-spaces/issues">Request Feature</a>
@@ -76,8 +76,22 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]]
+Between Spaces is an app prototype that allow you to move between desktop spaces with your phone.
 
+![Between Spaces Screen Shot][product-screenshot]
+
+This app runs a local server that can be accessed with a phone with a QR code or a link displayed inside the app.
+Once the link is open, few buttons will appear on screen which are keyboard shortcuts emitted to OS. 
+
+The link will also be displayed inside the app.
+The default shortcuts to move between spaces are: 
+* Move left - `ctrl + "left"` 
+* Move right - `ctrl + "right"`
+* Mission control - `ctrl + "up"` 
+
+The buttons send a GET request to the local server that will trigger [Node Key Sender](https://www.npmjs.com/package/node-key-sender) sending the keyboard shortcuts to the OS. 
+
+Shortcuts can be added or removed by modifying the endpoints available on `server.js` and `client/index.html`
 
 
 ### Built With
@@ -92,12 +106,16 @@
 ## Getting Started
 *Java is required to run this app*
 
-This app runs a local server on port: 8080 that can accessed through a QR code or visiting your ip address followed by *:8080* from you phone.
-The link will also be displayed inside the app.
 
-Link example: 192.168.x.x:8080
+
+
 
 ### Prerequisites
+
+* MacOS
+* A smartphone / tablet
+
+Software
 
 * NodeJS
 * Java
@@ -119,10 +137,10 @@ Link example: 192.168.x.x:8080
 ## Usage
 
 * Run the app
-* Click on system tray icon to show a QR code OR the needed link
+* If an receive an alert grant the app access to your Mac otherwise choose Apple menu  > System Preferences, click Security & Privacy, click Privacy, click Accessibility, then select VSCode and Java tickboxes - [Apple.com](https://support.apple.com/en-gb/guide/mac-help/mh43185/mac)
+* Click on the system tray icon to show a QR code OR the link with the IP address followed by the PORT
 * Scan the QR code OR visit the link showed underneath the QR code from your phone
 * Enjoy!
-  
 
 
 <!-- CONTRIBUTING -->
@@ -162,6 +180,7 @@ Project Link: [https://github.com/rico157/between-spaces](https://github.com/ric
 
 * [Node Key Sender](https://www.npmjs.com/package/node-key-sender)
 * [QR Code Generator](https://www.npmjs.com/package/qrcode-generator)
+* [Font Awesome](https://www.fontawesome.com)
 
 
 
