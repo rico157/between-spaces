@@ -88,7 +88,7 @@ The default shortcuts to move between spaces are:
 * Move right - `ctrl + "right"`
 * Mission control - `ctrl + "up"` 
 
-The buttons send a GET request to the local server that will trigger [Node Key Sender](https://www.npmjs.com/package/node-key-sender) sending the keyboard shortcuts to the OS. 
+The buttons send a GET request to the local server that will trigger [KBM-Robot](https://github.com/kylepaulsen/kbm-robot) sending the keyboard shortcuts to the OS. 
 
 Shortcuts can be added or removed by modifying the endpoints available on `server.js` and `client/index.html`
 
@@ -97,7 +97,7 @@ Shortcuts can be added or removed by modifying the endpoints available on `serve
 
 * [ElectronJS](https://www.electronjs.org/)
 * [ExpressJS](https://expressjs.com/)
-* [Node Key Sender](https://www.npmjs.com/package/node-key-sender)
+* [KBM-Robot](https://github.com/kylepaulsen/kbm-robot)
 
 
 
@@ -180,7 +180,7 @@ Project Link: [https://github.com/rico157/between-spaces](https://github.com/ric
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* [Node Key Sender](https://www.npmjs.com/package/node-key-sender)
+* [KBM-Robot](https://github.com/kylepaulsen/kbm-robot)
 * [QR Code Generator](https://www.npmjs.com/package/qrcode-generator)
 * [Font Awesome](https://www.fontawesome.com)
 
