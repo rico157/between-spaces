@@ -1,8 +1,11 @@
 const express = require("express");
 const app = express();
-const ks = require("node-key-sender");
-ks.setOption("globalDelayPressMillisec", 0);
-const send = (key) => ks.sendCombination(["control", key]);
+const robot = require("kbm-robot");
+
+robot.startJar();
+
+const send = (key) =>
+  robot.press("CTRL").press(key).release(key).release("CTRL").go();
 
 app.use(express.static(__dirname + "/client"));
 
