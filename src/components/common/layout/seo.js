@@ -45,12 +45,16 @@ const SEO = ({ description, lang, meta, title }) => {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: `https://github.com/rico157/between-spaces/blob/main/examples/preview_banner.png`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: `Riccardo Cogoni`,
         },
         {
           name: `twitter:title`,
