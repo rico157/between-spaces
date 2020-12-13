@@ -7,36 +7,83 @@ const Footer = () => (
   <FooterWrapper id="footer">
     <FooterColumnContainer>
       <FooterColumn>
-        <span>Features</span>
+        <span>Docs</span>
         <ul>
-          <li>Automation</li>
-          <li>Rewards</li>
+          <li>
+            <FooterLink target="_blank" href="https://www.electronjs.org/">
+              Electron.js
+            </FooterLink>
+          </li>
+          <li>
+            <FooterLink
+              target="_blank"
+              href="https://github.com/kylepaulsen/kbm-robot"
+            >
+              KBM-Robot
+            </FooterLink>
+          </li>
         </ul>
       </FooterColumn>
       <FooterColumn>
-        <span>Resources</span>
+        <span>Links</span>
         <ul>
-          <li>Compare</li>
-          <li>Blog</li>
+          <li>
+            <FooterLink
+              target="_blank"
+              href="https://github.com/rico157/between-spaces"
+            >
+              GitHub
+            </FooterLink>
+          </li>
+          <li>
+            <FooterLink
+              target="_blank"
+              href="https://github.com/rico157/between-spaces/releases"
+            >
+              Downloads
+            </FooterLink>
+          </li>
         </ul>
       </FooterColumn>
       <FooterColumn>
-        <span>Company</span>
+        <span>About me</span>
         <ul>
-          <li>About Us</li>
-          <li>Careers</li>
+          <li>
+            <FooterLink target="_blank" href="https://rico157.github.io/">
+              Portfolio
+            </FooterLink>
+          </li>
+          <li>
+            <FooterLink target="_blank" href="https://github.com/rico157">
+              GitHub
+            </FooterLink>
+          </li>
         </ul>
       </FooterColumn>
       <FooterColumn>
         <span>Social</span>
         <ul>
-          <li>LinkedIn</li>
-          <li>Instagram</li>
+          <li>
+            <FooterLink
+              target="_blank"
+              href="https://www.linkedin.com/in/riccardo-cogoni/"
+            >
+              LinkedIn
+            </FooterLink>
+          </li>
+          <li>
+            <FooterLink
+              target="_blank"
+              href="https://twitter.com/riccardo_cogoni"
+            >
+              Twitter
+            </FooterLink>
+          </li>
         </ul>
       </FooterColumn>
     </FooterColumnContainer>
     <BrandContainer>
-      <Logo>Finance</Logo>
+      <Logo>Between Spaces</Logo>
     </BrandContainer>
   </FooterWrapper>
 )
@@ -48,9 +95,9 @@ const FooterWrapper = styled.footer`
 `
 
 const Logo = styled.div`
-  font-family: ${props => props.theme.font.extrabold};
-  ${props => props.theme.font_size.regular};
-  color: ${props => props.theme.color.black.regular};
+  font-family: ${(props) => props.theme.font.extrabold};
+  ${(props) => props.theme.font_size.regular};
+  color: ${(props) => props.theme.color.black.regular};
   text-decoration: none;
   letter-spacing: 1px;
   margin: 0;
@@ -69,7 +116,7 @@ const BrandContainer = styled(Container)`
   display: flex;
   align-items: flex-end;
 
-  @media (max-width: ${props => props.theme.screen.sm}) {
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
   }
 `
 const FooterColumnContainer = styled(Container)`
@@ -77,7 +124,7 @@ const FooterColumnContainer = styled(Container)`
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 32px;
   justify-content: start;
-  @media (max-width: ${props => props.theme.screen.sm}) {
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
     grid-template-columns: 1fr 1fr;
     grid-gap: 32px;
   }
@@ -85,20 +132,24 @@ const FooterColumnContainer = styled(Container)`
 const FooterColumn = styled.div`
   span {
     font-size: 16px;
-    font-family: ${props => props.theme.font.bold};
-    color: ${props => props.theme.color.primary};
+    font-family: ${(props) => props.theme.font.bold};
+    color: ${(props) => props.theme.color.primary};
   }
   ul {
     list-style: none;
     margin: 16px 0;
     padding: 0;
-    color: ${props => props.theme.color.black.regular};
+    color: ${(props) => props.theme.color.black.regular};
     li {
       margin-bottom: 12px;
-      font-family: ${props => props.theme.font.normal};
+      font-family: ${(props) => props.theme.font.normal};
       font-size: 15px;
     }
   }
+`
+
+const FooterLink = styled.a`
+  text-decoration: none;
 `
 
 export default Footer

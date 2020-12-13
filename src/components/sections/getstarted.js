@@ -4,11 +4,15 @@ import styled from "styled-components"
 import { Container, Section } from "../global"
 
 const GetStarted = () => (
-  <StyledSection>
+  <StyledSection id="Beta">
     <GetStartedContainer>
-      <GetStartedTitle>Be the first to get the beta</GetStartedTitle>
-      <TryItButton>Get early access</TryItButton>
-      <Subtitle>No credit card required.</Subtitle>
+      <GetStartedTitle>Try the beta</GetStartedTitle>
+      <TryItLink
+        href="https://github.com/rico157/between-spaces/releases"
+        target="_blank"
+      >
+        DOWNLOAD
+      </TryItLink>
     </GetStartedContainer>
   </StyledSection>
 )
@@ -16,7 +20,7 @@ const GetStarted = () => (
 export default GetStarted
 
 const StyledSection = styled(Section)`
-  background-color: ${props => props.theme.color.background.light};
+  background-color: ${(props) => props.theme.color.background.light};
   clip-path: polygon(0 0, 100% 14%, 100% 100%, 0% 100%);
 `
 
@@ -33,7 +37,10 @@ const GetStartedTitle = styled.h3`
   text-align: center;
 `
 
-const TryItButton = styled.button`
+const TryItLink = styled.a`
+  display: flex !important;
+  align-items: center;
+  text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   color: white;
@@ -44,7 +51,7 @@ const TryItButton = styled.button`
   text-transform: uppercase;
   cursor: pointer;
   white-space: nowrap;
-  background: ${props => props.theme.color.secondary};
+  background: ${(props) => props.theme.color.secondary};
   border-radius: 4px;
   padding: 0px 40px;
   border-width: 0px;
@@ -55,16 +62,9 @@ const TryItButton = styled.button`
   &:hover {
     box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;
   }
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${(props) => props.theme.screen.md}) {
   }
-  @media (max-width: ${props => props.theme.screen.sm}) {
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
     margin-left: 0;
   }
-`
-
-const Subtitle = styled.span`
-  ${props => props.theme.font_size.xxsmall}
-  padding-top: 16px;
-  font-size: 14px;
-  color: ${props => props.theme.color.primary};
 `

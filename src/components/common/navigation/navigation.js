@@ -14,8 +14,9 @@ import {
   Mobile,
   ActionsContainer,
 } from "./style"
+import styled from "styled-components"
 
-const NAV_ITEMS = ["Features", "Product", "Pricing", ""]
+const NAV_ITEMS = ["Features"]
 
 export default class Navigation extends Component {
   state = {
@@ -27,7 +28,7 @@ export default class Navigation extends Component {
     window.addEventListener("scroll", this.handleScroll)
   }
 
-  handleScroll = event => {
+  handleScroll = (event) => {
     const scrollTop = window.pageYOffset
 
     if (scrollTop > 32) {
@@ -38,7 +39,9 @@ export default class Navigation extends Component {
   }
 
   toggleMobileMenu = () => {
-    this.setState(prevState => ({ mobileMenuOpen: !prevState.mobileMenuOpen }))
+    this.setState((prevState) => ({
+      mobileMenuOpen: !prevState.mobileMenuOpen,
+    }))
   }
 
   closeMobileMenu = () => {
@@ -47,7 +50,7 @@ export default class Navigation extends Component {
     }
   }
 
-  getNavAnchorLink = item => (
+  getNavAnchorLink = (item) => (
     <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
       {item}
     </AnchorLink>
@@ -56,12 +59,12 @@ export default class Navigation extends Component {
   getNavList = ({ mobile = false }) => (
     <NavListWrapper mobile={mobile}>
       <Scrollspy
-        items={NAV_ITEMS.map(item => item.toLowerCase())}
+        items={NAV_ITEMS.map((item) => item.toLowerCase())}
         currentClassName="active"
         mobile={mobile}
         offset={-64}
       >
-        {NAV_ITEMS.map(navItem => (
+        {NAV_ITEMS.map((navItem) => (
           <NavItem key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
         ))}
       </Scrollspy>
@@ -77,7 +80,7 @@ export default class Navigation extends Component {
           <Brand>
             <Scrollspy offset={-64} item={["top"]} currentClassName="active">
               <AnchorLink href="#top" onClick={this.closeMobileMenu}>
-                Finance
+                Between Spaces
               </AnchorLink>
             </Scrollspy>
           </Brand>
@@ -96,7 +99,12 @@ export default class Navigation extends Component {
 
           <Mobile hide>{this.getNavList({})}</Mobile>
           <ActionsContainer>
-            <button>Sign up</button>
+            <NavLink
+              href="https://github.com/rico157/between-spaces"
+              target="_blank"
+            >
+              Get Started
+            </NavLink>
           </ActionsContainer>
         </StyledContainer>
         <Mobile>
@@ -110,3 +118,36 @@ export default class Navigation extends Component {
     )
   }
 }
+
+const NavLink = styled.a`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+  letter-spacing: 1px;
+  height: 40px;
+  margin-left: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  background: ${(props) => props.theme.color.secondary};
+  border-radius: 4px;
+  padding: 0px 30px;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  outline: 0px;
+  &:hover {
+    box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;
+  }
+  @media (max-width: ${(props) => props.theme.screen.md}) {
+  }
+  ${
+    "" /* @media (max-width: ${(props) => props.theme.screen.sm}) {
+    margin-left: 0;
+  } */
+  }
+`
