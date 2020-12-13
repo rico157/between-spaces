@@ -11,7 +11,7 @@ import GetStarted from "../components/sections/getstarted"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Between Spaces" description="Remote Keyboards Shortcuts" />
     <Navigation />
     <Header />
     <Features />
