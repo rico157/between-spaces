@@ -84,11 +84,11 @@ const HeaderTextGroup = styled.div`
   margin: 0;
 
   > div {
-    width: 120%;
+    width: 100%;
     margin-bottom: -4.5%;
 
     @media (max-width: ${(props) => props.theme.screen.md}) {
-      margin: 0 16px;
+      margin: 0 0px;
     }
   }
 
@@ -122,17 +122,19 @@ const HeaderLinks = styled.div`
   display: flex;
   flex-direction: row;
   padding-bottom: 16px;
-
-  ${
-    "" /* @media (max-width: ${(props) => props.theme.screen.sm}) {
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
+    flex-direction: row;
+  }
+  @media (max-width: ${(props) => props.theme.screen.xs}) {
     flex-direction: column;
-  } */
   }
 `
 
 const HeaderLink = styled.a`
   display: flex !important;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
@@ -155,12 +157,12 @@ const HeaderLink = styled.a`
   &:hover {
     box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;
   }
-  @media (max-width: ${(props) => props.theme.screen.md}) {
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
+    margin-left: 8px;
   }
-  ${
-    "" /* @media (max-width: ${(props) => props.theme.screen.sm}) {
-    margin-left: 0;
-  } */
+  @media (max-width: ${(props) => props.theme.screen.xs}) {
+    margin-left: 0px;
+    margin-bottom: 8px;
   }
 `
 const ImageWrapper = styled.div`
