@@ -3,6 +3,7 @@ require("dotenv").config({
 })
 
 module.exports = {
+  pathPrefix: "/between-spaces",
   siteMetadata: {
     title: `Between Spaces`,
     description: `Showcase page made with the gatsby starter from Keegan Burkett.`,
