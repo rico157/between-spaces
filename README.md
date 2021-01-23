@@ -37,8 +37,8 @@
   <p align="center">
     Move between desktop spaces from your phone
     <br />
-    <!-- <a href="https://github.com/rico157/between-spaces">View Demo</a> -->
-    <!-- · -->
+    <a href="https://github.com/rico157/between-spaces/releases">Download</a>
+    ·
     <a href="https://github.com/rico157/between-spaces/issues">Report Bug</a>
     ·
     <a href="https://github.com/rico157/between-spaces/issues">Request Feature</a>
